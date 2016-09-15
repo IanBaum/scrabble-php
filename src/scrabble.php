@@ -1,9 +1,21 @@
 <?php
     class Scrabble{
 
-      private $score;
+        private $word;
+        private $score;
+
+        function getWord()
+        {
+          return $this->word;
+        }
+
+        function getScore()
+        {
+          return $this->score;
+        }
 
         function wordScore($word){
+            $this->word = $word;
             $onePoint = ["A", "E", "I", "O","U", "L", "N", "R", "S", "T"];
             $twoPoints = ["D", "G"];
             $threePoints = ["B", "C", "M", "P"];
